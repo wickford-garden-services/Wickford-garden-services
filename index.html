@@ -29,6 +29,50 @@
       margin-top: 10px;
     }
 
+    nav {
+      margin-top: 20px;
+    }
+
+    .nav {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .nav li {
+      position: relative;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 25px;
+      background-color: #66bb6a;
+      padding: 10px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 5px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     .section {
       padding: 40px 20px;
       max-width: 800px;
@@ -62,20 +106,6 @@
       padding: 15px 10px;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
@@ -88,6 +118,17 @@
   <header>
     <h1>Wickford Garden Services</h1>
     <p>Reliable Garden Maintenance in Wickford, Essex</p>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Gallery ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="gallery.html">View Photos</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <div class="section">
@@ -109,22 +150,6 @@
       <li>General Maintenance</li>
       <li>Lawn Mowing</li>
     </ul>
-  </div>
-
-  <div class="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="./Garden1.jpg" alt="Garden Project" />
-      <img src="./Mulch1.jpg" alt="Mulching Work" />
-      <img src="./Flowerbed1.jpg" alt="Flowerbed 1" />
-      <img src="./Flowerbed2.jpg" alt="Flowerbed 2" />
-      <img src="./Maintenance1.jpg" alt="Maintenance 1" />
-      <img src="./Maintenance2.jpg" alt="Maintenance 2" />
-      <img src="./Maintenance3.jpg" alt="Maintenance 3" />
-      <img src="./Maintenance4.jpg" alt="Maintenance 4" />
-      <img src="./Mowing1.jpg" alt="Mowing 1" />
-      <img src="./Mowing2.jpg" alt="Mowing 2" />
-    </div>
   </div>
 
   <div class="contact section">
